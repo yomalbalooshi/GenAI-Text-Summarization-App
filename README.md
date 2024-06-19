@@ -17,6 +17,8 @@ This tutorial will go over all steps in detail. However, it is prefered if you h
 
 ## What We Will Be Building
 
+![alt gif](Demo.gif 'Preview of React application')
+
 The application we'll build consists of a frontend (either React or Vanilla JavaScript) where users can input text, and a backend serverless architecture on AWS that handles the text summarization logic using Claude 3 - Sonnet accessed through Amazon Bedrock. Here's a high-level overview of the components:
 
 - Frontend: A simple user interface where users can input text and view the generated summary. There are two versions available:
@@ -39,7 +41,7 @@ Each step is explained in detail, with code snippets and screenshots to guide yo
 
 ## Getting Started
 
-To get started, simply follow the step-by-step instructions in the tutorial. Choose the appropriate frontend folder (GMTB-React-App or GMTB-VanillaJS-App) based on your preference.
+To get started, simply **fork and clone** this repo and follow the step-by-step instructions in the tutorial.
 
 Happy coding!
 
