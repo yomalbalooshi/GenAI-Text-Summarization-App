@@ -1,0 +1,21 @@
+body {
+  margin: 30px;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+button,
+#input {
+  padding: 8px;
+  font-family: 'Nunito', sans-serif;
+  margin: 1%;
+}
+
+#outputdiv {
+  width: 50%;
+}
+#output {
+  text-align: center;
+}

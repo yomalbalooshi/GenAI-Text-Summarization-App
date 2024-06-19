@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Give me the butter</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <textarea id="input" rows="12" cols="50" placeholder="Text to Summarize"></textarea>
+  <button onclick="callAPI()">Submit</button>
+  <div id="outputdiv">
+    <p id="output"></p>
+  </div>
+  <script>
+    function callAPI() {
+      const input = document.getElementById('input').value;
+      // Assign the following variables with values from the AWS console
+      const apiUrl = 'YOUR API URL'; 
+      const apiKey = 'YOUR API KEY';
+      const data = { prompt: input }; 
+
+      axios.post(apiUrl, data, {
+        headers: {
+          'X-Api-Key': apiKey
+        }
+      })
+      .then(response => {
+        const output = document.getElementById('output');
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(response.data, 'application/xml');
+        const summaryText = doc.querySelector('summary').textContent.trim();
+        output.textContent = summaryText;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      }); 
+    }
+  </script>
+</body>
+</html>
