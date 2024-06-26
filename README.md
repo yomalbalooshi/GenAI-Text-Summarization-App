@@ -30,11 +30,7 @@ Note: This tutorial may incur some costs through AWS. Please review the [AWS Pri
 
 ## What We Will Be Building
 
-<<<<<<< HEAD
 ![Preview of React application](public/Demo.gif 'Preview of React application')
-=======
-![alt gif](./Demo.gif 'Preview of React application')
->>>>>>> 02802b51e8ccc554c854ef2a66cd1989c6e97669
 
 The application we'll build consists of a frontend (either React or Vanilla JavaScript) where users can input text, and a backend serverless architecture on AWS that handles the text summarization logic using Claude 3 - Sonnet accessed through Amazon Bedrock. Here's a high-level overview of the components:
 
